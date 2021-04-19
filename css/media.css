@@ -1,0 +1,26 @@
+@media (max-width: 991px){
+    section {
+        padding: 150px 20px;
+    }
+    header {
+        padding: 20px;
+    }
+    .navigation {
+        display: none;
+    }
+    .toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: url(../img/menu2.png);
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 2px;
+    }
+
+}

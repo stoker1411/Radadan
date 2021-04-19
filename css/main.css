@@ -116,3 +116,9 @@ header ul li a:hover {
     color: #ff5e8e;
     transform: translateY(-10px);
 }
+.mosque {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    max-width: 900px;
+}
