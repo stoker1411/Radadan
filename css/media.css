@@ -8,6 +8,25 @@
     .navigation {
         display: none;
     }
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        flex-direction: column;
+    }
+    header ul li {
+        margin: 10px 0;
+    }
+    header ul li a {
+        margin-left: 0;
+        font-size: 1.5em;
+    }
     .toggle {
         position: fixed;
         top: 20px;
@@ -22,5 +41,22 @@
         z-index: 1000;
         border-radius: 2px;
     }
+    .toggle.active {
+        background: url(../img/close.png);
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;  
+    }
+    .mosque {
+        max-width: 400px;
+    }
+    .content.textbox {
+        font-size: 2.5em;
+    }
 
+}
+@media (max-width: 600px){
+    .mosque {
+        opacity: 0.4;
+    }
 }
