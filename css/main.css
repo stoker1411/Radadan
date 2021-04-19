@@ -14,6 +14,7 @@ section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    overflow-x: hidden;
 }
 header {
    position: fixed;
@@ -33,6 +34,19 @@ header .logo {
     font-size: 2em;
     text-decoration: none; 
     font-weight: 800;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+}
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 header ul {
     position: relative;
@@ -50,6 +64,19 @@ header ul li a {
     padding: 8px 18px;
     text-decoration: none;
     user-select: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes slide_top {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 header ul li a.active,
 header ul li a:hover {
@@ -71,10 +98,27 @@ header ul li a:hover {
     margin-bottom: 10px;
     line-height: 1.2em;
     font-weight: 700;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 1s;
 }
+@keyframes slide_right {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 .content .textbox p {
     font-size: 1.2em;
     color: #333;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 1.5s;
 }
 .content .textbox a {
     display: inline-block;
@@ -86,6 +130,9 @@ header ul li a:hover {
     border-radius: 40px;
     letter-spacing: 1px;
     text-decoration: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 1.75s;
 }
 .sci {
     position: absolute;
@@ -107,6 +154,9 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;   
     transition: .3s ease-in-out; 
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .sci li a.fab {
     filter: invert(1);
@@ -121,4 +171,15 @@ header ul li a:hover {
     bottom: -50px;
     right: 0;
     max-width: 900px;
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 3.5s;
+}
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

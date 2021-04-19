@@ -57,6 +57,6 @@
 }
 @media (max-width: 600px){
     .mosque {
-        opacity: 0.4;
+        opacity: 0.4 !important;
     }
 }
